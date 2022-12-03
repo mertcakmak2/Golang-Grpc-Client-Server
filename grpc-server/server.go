@@ -25,5 +25,4 @@ func main() {
 		log.Fatalf("Failed to serve: %+v", err)
 	}
 
-	// Go func ile ayrı bir portta başka bir grpc server aç
 }
