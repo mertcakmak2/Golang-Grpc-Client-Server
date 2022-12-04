@@ -15,6 +15,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to dial: %+v", err)
 	}
+	defer conn.Close()
 
 	c := hello.NewHelloServiceClient(conn)
 	m, err := c.Talkie(context.Background(), &hello.Message{Content: "from client"})
